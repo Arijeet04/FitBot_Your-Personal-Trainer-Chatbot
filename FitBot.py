@@ -6,7 +6,7 @@ from youtube_search import YoutubeSearch
 from gradio import components
 
 # Set OpenAI API key
-openai.api_key = "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"
+openai.api_key = "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"
 
 # Define start and restart sequences for conversation history
 start_sequence = "\nTrainer:"
@@ -18,7 +18,7 @@ prompt = "The following is a conversation with a gym trainer. The trainer is kno
 # Function to generate response using OpenAI API
 def openai_create(prompt):
     response = openai.Completion.create(
-        model="text-davinci-003",
+        model="gpt-3.5-turbo-instruct",
         prompt=prompt,
         temperature=0.2,
         max_tokens=150,
